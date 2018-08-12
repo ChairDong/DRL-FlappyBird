@@ -61,6 +61,8 @@ class BrainDQN:
 
 	def createQNetwork(self):
 		# network weights
+		# 第一二参数值得卷积核尺寸大小，即patch，第三个参数是图像通道数，第四个参数是卷积核的数目，代表会出现多少个卷积特征图像
+		# 每个kernel 一个bias 一个8*8的w矩阵
 		W_conv1 = self.weight_variable([8,8,4,32])
 		b_conv1 = self.bias_variable([32])
 
